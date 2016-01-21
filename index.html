@@ -1,0 +1,65 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <title>Ping-Pong</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <style>
+  html, body {
+  	height: 100%;
+  }
+  .span0 {
+  	background-color: #f2ddb6;
+   }
+  .span1 {
+  	background-color: #91ba91;
+
+  }
+  .span1, .span2 {
+  	margin-bottom: -9999px;
+  	padding-bottom: 9999px;
+  	margin-top: 30px;
+  	font-weight: bold;
+  }
+  .brown {
+  	color: #f2ddb6;
+  }
+  .white {
+  	color: #ffffff;
+  }
+  </style>
+<head>
+<body>
+  <div class="container">
+  	<div class="row-fluid">
+
+      <div id="banner" class="span0 col-sm-12 text-center">
+  			<h1>Ping-Pong</h1>
+  		</div>
+
+  		<div id="sidebar" class="span1 col-sm-4">
+  			<h3>About Ping Pong</h3>
+  			<h4 class="brown">Created by: <h5>
+  			<p class="white"> Lorenzo Ferrario</p>
+  			<h4 class="brown">GitHub Username/URL: <h5>
+  			<a href="https://github.com/spawner999">spawner999</a>
+  			<h4 class="brown">Level 2 test for: <h5>
+  			<p class="white"> CSS</p>
+  		</div>
+
+  		<div id="content" class="span2 col-sm-8">
+  			<h2>Let's Play!<h2>
+  			<h4>Rules: </h4>
+  			<p>Ping pong will count up to your number from 1 with the following exceptions: </p>
+  			<ol>
+  				<li>Numbers divisible by 3 become "ping"</li>
+  				<li>Numbers divisible by 5 become "pong"</li>
+  				<li>Numbers divisible by 3 and 5 become "pingpong"</li>
+  		</div>
+
+  	</div>
+  </div>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

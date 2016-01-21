@@ -14,5 +14,6 @@ var pingPong = function(number){
 	if(number % 5 === 0){
 		return 'pong';
 	}
+	else return number;
 };
 
