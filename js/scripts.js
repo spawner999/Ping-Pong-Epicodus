@@ -13,11 +13,11 @@ var appendResult = function(number){
 };
 
 var appendErrorMsg = function(){
-  $('#results').append('<li>The number you entered is invalid. Please try entering a different one.</li>');
+  $('#results').append('The number you entered is invalid. Please try entering a different one.');
 };
 
 $(document).ready(function(){
-  $('form#input-form').submit(function(event) {
+  $('form#input-form').submit(function(event){
     $('#results').empty();
     var parsedInput = parseInt($('input#user-input').val());
     if(isValidNumber(parsedInput)) {
