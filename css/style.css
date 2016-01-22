@@ -1,25 +1,34 @@
 html, body {
   height: 100%;
 }
+
 .container {
   min-height: 100%;
   overflow: hidden;
 }
+
 .banner {
   background-color: #f2ddb6;
 }
+
 .sidebar {
   background-color: #91ba91;
-}
-.sidebar, .content {
   margin-top: 30px;
 }
+
+.content {
+  padding-left: 50px;
+  margin-top: 30px;
+}
+
 .text-beige {
   color: #f2ddb6;
-  }
+}
+
 .text-white {
   color: #ffffff;
 }
+
 @media (min-width: 768px) {
   .sidebar, .content {
     margin-bottom: -9999px;
