@@ -1,5 +1,5 @@
 var isValidNumber = function(input){
-	return(typeof input === 'number'? (input < 1? false : true) : false);
+	return(typeof input === 'number' && input > 0);
 };
 
 var pingPong = function(number){

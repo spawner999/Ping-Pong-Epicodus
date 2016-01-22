@@ -19,7 +19,6 @@
   	margin-bottom: -9999px;
   	padding-bottom: 9999px;
   	margin-top: 30px;
-  	font-weight: bold;
   }
   .brown {
   	color: #f2ddb6;
@@ -31,7 +30,7 @@
 <head>
 <body>
   <div class="container">
-  	<div class="row-fluid">
+
 
       <div id="banner" class="span0 col-sm-12 text-center">
   			<h1>Ping-Pong</h1>
@@ -55,9 +54,15 @@
   				<li>Numbers divisible by 3 become "ping"</li>
   				<li>Numbers divisible by 5 become "pong"</li>
   				<li>Numbers divisible by 3 and 5 become "pingpong"</li>
+        </ol>
+        <form id="input-form">
+          <label for="user-input">Enter yor number here: </label>
+          <input id="user-input" type="text">
+          <button type="submit" class="btn">Ping Pong!</button>
+        </form>
   		</div>
 
-  	</div>
+
   </div>
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/scripts.js"></script>
