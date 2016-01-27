@@ -1,30 +1,36 @@
+'use strict';
+
+/*BACK-END*/
 var isValidNumber = function(input){
   return(typeof input === 'number' && input > 0);
 };
 
-var pingPong = function(number){
-  return(number % 3 === 0? (number % 5 === 0? 'pingpong' : 'ping') : (number % 5 === 0? 'pong' : number));
+var evaluateNumber = function(validNumber){
+  return(validNumber % 3 === 0? (validNumber % 5 === 0? 'pingpong' : 'ping') : (validNumber % 5 === 0? 'pong' : validNumber));
 };
 
-var appendResult = function(number){
-  for(var i=1; i<=number; i++){
-    $('#results').append('<li>' + pingPong(i) + '</li>');
-  }
+var pingPong = function(input){
+  var array = [];
+    if(isValidNumber(input)){
+      for(var i=1; i<=input; i++){
+        array.push(evaluateNumber(i));
+      }
+    }
+    else {
+      array.push('The number you entered is invalid. Please try using a different one.');
+    }
+  return array;
 };
 
-var appendErrorMsg = function(){
-  $('#results').append('The number you entered is invalid. Please try entering a different one.');
-};
-
+/*FRONT-END*/
 $(document).ready(function(){
   $('form#input-form').submit(function(event){
     $('#results').empty();
     var parsedInput = parseInt($('input#user-input').val());
-    if(isValidNumber(parsedInput)) {
-      appendResult(parsedInput);
-    }
-    else {
-      appendErrorMsg();
+    var pingPongList = pingPong(parsedInput);
+    var listLength = pingPongList.length;
+    for(var i=0; i<listLength; i++){
+      $('#results').append('<li>' + pingPongList[i] + '</li>');
     }
     event.preventDefault();
   });

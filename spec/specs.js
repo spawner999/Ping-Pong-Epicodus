@@ -1,31 +1,28 @@
-describe('isValidNumber', function(){
-  it('returns false if input is not a number', function(){
-    expect(isValidNumber('three')).to.be.false;
-  });
-
-  it('returns false if input is a number but is smaller than 1', function(){
-    expect(isValidNumber(-5)).to.be.false;
-  });
-
-  it('returns true if input is a valid number', function(){
-    expect(isValidNumber(3)).to.be.true;
-  });
-});
+'use strict';
 
 describe('pingPong', function(){
-  it('returns ping if number is divisible by 3', function(){
-    expect(pingPong(3)).to.equal('ping');
+  it('returns numbers up to the given number', function(){
+    expect(pingPong(2)).to.eql([1, 2]);
   });
 
-  it('returns pong if number is divisible by 5', function(){
-    expect(pingPong(5)).to.equal('pong');
+  it('returns numbers up to the given number, replacing multiples of 3 with ping', function(){
+    expect(pingPong(3)).to.eql([1, 2, "ping"]);
   });
 
-  it('returns pingpong if number is divisible by both 3 and 5', function(){
-    expect(pingPong(15)).to.equal('pingpong');
+  it('returns numbers up to the given number, replacing multiples of 3 with ping and multiples of 5 with ping', function(){
+    expect(pingPong(5)).to.eql([1, 2, 'ping', 4, 'pong']);
   });
 
-  it('returns number if none of the above is true', function(){
-    expect(pingPong(17)).to.equal(17);
+  it('returns numbers up to the given number, replacing multiples of 3 with ping, multiples of 5 with ping and multiples of 15 with pingpong', function(){
+    expect(pingPong(15)).to.eql([1, 2, 'ping', 4, 'pong', 'ping', 7, 8, 'ping', 'pong', 11, 'ping', 13, 14, 'pingpong']);
   });
+
+  it('returns an error message if the given input is not a number', function(){
+    expect(pingPong('number')).to.eql(['The number you entered is invalid. Please try using a different one.']);
+  });
+
+  it('returns an error message if the given number is smaller than 1', function(){
+    expect(pingPong('number')).to.eql(['The number you entered is invalid. Please try using a different one.']);
+  });
+
 });
